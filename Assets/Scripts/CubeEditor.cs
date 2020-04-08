@@ -17,11 +17,12 @@ public class CubeEditor : MonoBehaviour
 
         snapPos.x = Mathf.RoundToInt(transform.position.x / gridSize) * 10f;
         snapPos.z = Mathf.RoundToInt(transform.position.z / gridSize) * 10f;
+        transform.position = new Vector3(snapPos.x, 0, snapPos.z);
 
         textMesh = GetComponentInChildren<TextMesh>();
-        textMesh.text = snapPos.x / gridSize + "," + snapPos.z / gridSize;
-
-        transform.position = new Vector3(snapPos.x, 0, snapPos.z);
+        string labelText = snapPos.x / gridSize + "," + snapPos.z / gridSize;
+        textMesh.text = labelText;
+        gameObject.name = "Waypoint " + labelText;
     }
 
 }
