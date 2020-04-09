@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class Waypoint : MonoBehaviour
 {
-    // Start is called before the first frame update
+    const int gridSize = 10;
+
     void Start()
     {
         
+    }
+
+    public int GetGridSize()
+    {
+        return gridSize;
     }
 
     // Update is called once per frame
