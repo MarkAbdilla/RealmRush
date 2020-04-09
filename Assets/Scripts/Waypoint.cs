@@ -8,11 +8,6 @@ public class Waypoint : MonoBehaviour
 
     const int gridSize = 10;
 
-    void Start()
-    {
-        
-    }
-
     public int GetGridSize()
     {
         return gridSize;
@@ -26,9 +21,9 @@ public class Waypoint : MonoBehaviour
         );
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetTopColour(Color colour)
     {
-        
+        MeshRenderer topMeshRenderer = transform.Find("Top").GetComponent<MeshRenderer>();
+        topMeshRenderer.material.color = colour;
     }
 }
