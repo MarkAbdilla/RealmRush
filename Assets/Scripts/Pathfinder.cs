@@ -9,6 +9,9 @@ public class Pathfinder : MonoBehaviour
     [SerializeField] Waypoint endWaypoint;
 
     Dictionary<Vector2Int, Waypoint> grid = new Dictionary<Vector2Int, Waypoint>();
+    Queue<Waypoint> queue = new Queue<Waypoint>();
+    bool isRunning = true;
+
     Vector2Int[] directions = {
         Vector2Int.up,
         Vector2Int.right,
@@ -20,7 +23,30 @@ public class Pathfinder : MonoBehaviour
     {
         LoadBlocks();
         ColourStartAndEnd();
-        ExploreNeighbours();
+        Pathfind();
+        //ExploreNeighbours();
+    }
+
+    private void Pathfind()
+    {
+        queue.Enqueue(startWaypoint);
+        while(queue.Count > 0)
+        {
+            var searchCentre = queue.Dequeue();
+            print(searchCentre);
+            HaltIfEndFound(searchCentre);
+        }
+
+        print("Finished pathfinding");
+    }
+
+    private void HaltIfEndFound(Waypoint searchCentre)
+    {
+        if (searchCentre == endWaypoint)
+        {
+            print("Departure and destination points are the same");
+            isRunning = false;
+        }
     }
 
     private void ExploreNeighbours()
