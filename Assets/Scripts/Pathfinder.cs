@@ -23,8 +23,7 @@ public class Pathfinder : MonoBehaviour
         foreach(Waypoint waypoint in waypoints)
         {
             var gridPos = waypoint.GetGridPos();
-            bool isOverlapping = grid.ContainsKey(gridPos);
-            if (isOverlapping)
+            if (grid.ContainsKey(gridPos))
             {
                 Debug.LogWarning("Overlapping block found " + waypoint);
             }
