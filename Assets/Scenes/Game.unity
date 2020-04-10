@@ -2071,6 +2071,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0eaab4141ff2424ebe4783ce005c650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startWaypoint: {fileID: 1035190247}
+  endWaypoint: {fileID: 283160545}
+  isRunning: 1
 --- !u!4 &2078625256 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2971837272825751888, guid: cf649ca43ba8b2340a5652f88ce467da,
