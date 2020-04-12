@@ -10,7 +10,8 @@ public class Pathfinder : MonoBehaviour
 
     Dictionary<Vector2Int, Waypoint> grid = new Dictionary<Vector2Int, Waypoint>();
     Queue<Waypoint> queue = new Queue<Waypoint>();
-    [SerializeField] bool isRunning = true;
+    bool isRunning = true;
+    Waypoint searchCentre;
 
     Vector2Int[] directions = {
         Vector2Int.up,
@@ -22,7 +23,6 @@ public class Pathfinder : MonoBehaviour
     void Start()
     {
         LoadBlocks();
-        ColourStartAndEnd();
         Pathfind();
     }
 
@@ -31,16 +31,16 @@ public class Pathfinder : MonoBehaviour
         queue.Enqueue(startWaypoint);
         while (queue.Count > 0 && isRunning)
         {
-            var searchCentre = queue.Dequeue();
+            searchCentre = queue.Dequeue();
             print("Searching from " + searchCentre);
-            HaltIfEndFound(searchCentre);
-            ExploreNeighbours(searchCentre);
+            HaltIfEndFound();
+            ExploreNeighbours();
             searchCentre.isExplored = true;
         }
         print("finished pathfinding?");
     }
 
-    private void HaltIfEndFound(Waypoint searchCentre)
+    private void HaltIfEndFound()
     {
         if (searchCentre == endWaypoint)
         {
@@ -49,12 +49,12 @@ public class Pathfinder : MonoBehaviour
         }
     }
 
-    private void ExploreNeighbours(Waypoint from)
+    private void ExploreNeighbours()
     {
         if (!isRunning) { return; }
         foreach (Vector2Int direction in directions)
         {
-            Vector2Int neighbourCoordinates = from.GetGridPos() + direction;
+            Vector2Int neighbourCoordinates = searchCentre.GetGridPos() + direction;
             try
             {
                 QueueNewNeighbours(neighbourCoordinates);
@@ -69,14 +69,14 @@ public class Pathfinder : MonoBehaviour
     private void QueueNewNeighbours(Vector2Int neighbourCoordinates)
     {
         Waypoint neighbour = grid[neighbourCoordinates];
-        if (neighbour.isExplored)
+        if (neighbour.isExplored || queue.Contains(neighbour))
         {
 
         }
         else
         {
-            neighbour.SetTopColour(Color.yellow);
             queue.Enqueue(neighbour);
+            neighbour.exploredFrom = searchCentre;
         }
     }
 
@@ -93,14 +93,7 @@ public class Pathfinder : MonoBehaviour
             else
             {
                 grid.Add(gridPos, waypoint);
-                waypoint.SetTopColour(Color.black);
             }
         }
-    }
-
-    private void ColourStartAndEnd()
-    {
-        startWaypoint.SetTopColour(Color.blue);
-        endWaypoint.SetTopColour(Color.red);
     }
 }

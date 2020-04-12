@@ -343,6 +343,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 121c68212e7058848a8da9c56e7a2c68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  exploredColour: {r: 0.9427508, g: 1, b: 0, a: 0}
+  unexploredColour: {r: 0.4433962, g: 0.25307047, b: 0.25307047, a: 0}
+  isExplored: 0
+  exploredFrom: {fileID: 0}
 --- !u!1 &5561052905567338709
 GameObject:
   m_ObjectHideFlags: 0

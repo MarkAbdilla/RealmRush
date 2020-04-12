@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Waypoint : MonoBehaviour
 {
+    [SerializeField] Color exploredColour, unexploredColour;
+
     public bool isExplored = false;
+    public Waypoint exploredFrom;
 
     Vector2Int gridPos;
 
@@ -15,17 +18,29 @@ public class Waypoint : MonoBehaviour
         return gridSize;
     }
 
+    void SetOwnColour()
+    {
+        MeshRenderer topMeshRenderer = transform.Find("Top").GetComponent<MeshRenderer>();
+        if (isExplored)
+        {
+            topMeshRenderer.material.color = exploredColour;
+        }
+        else
+        {
+            topMeshRenderer.material.color = unexploredColour;
+        }
+    }
+
+    private void Update()
+    {
+        SetOwnColour();
+    }
+
     public Vector2Int GetGridPos()
     {
         return new Vector2Int(
         Mathf.RoundToInt(transform.position.x / gridSize),
         Mathf.RoundToInt(transform.position.z / gridSize)
         );
-    }
-
-    public void SetTopColour(Color colour)
-    {
-        MeshRenderer topMeshRenderer = transform.Find("Top").GetComponent<MeshRenderer>();
-        topMeshRenderer.material.color = colour;
     }
 }
