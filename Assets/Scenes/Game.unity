@@ -6594,18 +6594,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 72681657, guid: 7efc1ed87dfb8124db7e447c8c79592a, type: 3}
-      propertyPath: moveWithTransform
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1974647440, guid: 7efc1ed87dfb8124db7e447c8c79592a, type: 3}
       propertyPath: targetEnemy
       value: 
       objectReference: {fileID: 1961584817}
+    - target: {fileID: 1974647440, guid: 7efc1ed87dfb8124db7e447c8c79592a, type: 3}
+      propertyPath: attackRange
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 2930368643232068909, guid: 7efc1ed87dfb8124db7e447c8c79592a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2930368643232068909, guid: 7efc1ed87dfb8124db7e447c8c79592a,
         type: 3}
@@ -6615,7 +6615,7 @@ PrefabInstance:
     - target: {fileID: 2930368643232068909, guid: 7efc1ed87dfb8124db7e447c8c79592a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 2930368643232068909, guid: 7efc1ed87dfb8124db7e447c8c79592a,
         type: 3}

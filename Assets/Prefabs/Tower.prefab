@@ -47,6 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToPan: {fileID: 1554144129683246643}
   targetEnemy: {fileID: 0}
+  attackRange: 10
+  projectileParticle: {fileID: 72681657}
 --- !u!1001 &1062138152619501261
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54,6 +56,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1554144129683246643}
     m_Modifications:
+    - target: {fileID: 1062138152683269748, guid: 6f00f96ea36987d469f76b4e1ad47a22,
+        type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1062138152683269754, guid: 6f00f96ea36987d469f76b4e1ad47a22,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -116,6 +123,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f00f96ea36987d469f76b4e1ad47a22, type: 3}
+--- !u!198 &72681657 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1062138152683269748, guid: 6f00f96ea36987d469f76b4e1ad47a22,
+    type: 3}
+  m_PrefabInstance: {fileID: 1062138152619501261}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1558245038952184411
 PrefabInstance:
   m_ObjectHideFlags: 0
