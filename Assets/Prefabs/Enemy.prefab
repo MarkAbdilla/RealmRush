@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6758024117073356815}
   - component: {fileID: 1950712095637443147}
   - component: {fileID: 6359083503461512598}
-  - component: {fileID: 1845682458688991723}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -80,19 +79,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &1845682458688991723
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2686375423223712491}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 15, y: 14, z: 13}
-  m_Center: {x: 0, y: 7, z: 0}
 --- !u!1 &3956508247026838737
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,6 +90,7 @@ GameObject:
   - component: {fileID: 7425043244685310796}
   - component: {fileID: 1140958044302866841}
   - component: {fileID: 7584001692930104949}
+  - component: {fileID: 8864138333432152171}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -138,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20eebe1ea7ce6564e87751c3ccb8783d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dwellTime: 1
+  dwellTime: 2
 --- !u!114 &7584001692930104949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,3 +139,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 10
+--- !u!65 &8864138333432152171
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3956508247026838737}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.15, y: 8, z: 7}
+  m_Center: {x: 0, y: 5.53, z: 0}

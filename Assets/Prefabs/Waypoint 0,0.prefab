@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 2971837272825751888}
   - component: {fileID: 1035190245}
   - component: {fileID: 8986392015804532371}
+  - component: {fileID: 2043403596}
   m_Layer: 0
   m_Name: Waypoint 0,0
   m_TagString: Untagged
@@ -151,10 +152,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 121c68212e7058848a8da9c56e7a2c68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exploredColour: {r: 0.9427508, g: 1, b: 0, a: 0}
-  unexploredColour: {r: 0.4433962, g: 0.25307047, b: 0.25307047, a: 0}
+  towerPrefab: {fileID: 1974647440, guid: 7efc1ed87dfb8124db7e447c8c79592a, type: 3}
   isExplored: 0
   exploredFrom: {fileID: 0}
+--- !u!65 &2043403596
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5386314828312889327}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: -5, z: 0}
 --- !u!1 &6613401728489262205
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,7 +179,6 @@ GameObject:
   - component: {fileID: 8564469712594972081}
   - component: {fileID: 6583839152128191649}
   - component: {fileID: 3369672102772209568}
-  - component: {fileID: 4595830500136703424}
   m_Layer: 0
   m_Name: Top
   m_TagString: Untagged
@@ -236,20 +248,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &4595830500136703424
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6613401728489262205}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &7012140287962318206
 PrefabInstance:
   m_ObjectHideFlags: 0
