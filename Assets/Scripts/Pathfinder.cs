@@ -90,7 +90,7 @@ public class Pathfinder : MonoBehaviour
             }
             catch
             {
-                Debug.Log("Something is wrong here");
+                //do nothing
             }
         }
     }
