@@ -495,6 +495,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 51509019}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &57998190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 57998191}
+  m_Layer: 0
+  m_Name: Towers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &57998191
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57998190}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &67229235 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2971837272825751888, guid: cf649ca43ba8b2340a5652f88ce467da,
@@ -4477,6 +4507,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1559393635}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1614561633 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4229884522268231500, guid: 13fb67ca9f3185f409d651da0932bdc7,
+    type: 3}
+  m_PrefabInstance: {fileID: 4229884522672955924}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1681947879
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5237,6 +5273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerPrefab: {fileID: 1974647440, guid: 7efc1ed87dfb8124db7e447c8c79592a, type: 3}
   towerLimit: 5
+  towerParentTransform: {fileID: 57998191}
 --- !u!1001 &1945993225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6514,6 +6551,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 114941686308246830, guid: 04f81ff9814844ccfa08226f8d46a3f4,
         type: 3}
+    - target: {fileID: 4229884522268231501, guid: 13fb67ca9f3185f409d651da0932bdc7,
+        type: 3}
+      propertyPath: enemyParentTransform
+      value: 
+      objectReference: {fileID: 1614561633}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13fb67ca9f3185f409d651da0932bdc7, type: 3}
 --- !u!1001 &5090874751751366067
