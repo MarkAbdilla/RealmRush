@@ -66,6 +66,11 @@ PrefabInstance:
       propertyPath: InitialModule.startSpeed.scalar
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 1062138152683269748, guid: 6f00f96ea36987d469f76b4e1ad47a22,
+        type: 3}
+      propertyPath: CollisionModule.minKillSpeed
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 1062138152683269754, guid: 6f00f96ea36987d469f76b4e1ad47a22,
         type: 3}
       propertyPath: m_LocalPosition.x
