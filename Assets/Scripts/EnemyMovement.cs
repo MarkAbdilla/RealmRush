@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] float dwellTime = 2f;
+    [SerializeField] ParticleSystem goalParticlePrefab;
 
     void Start()
     {
@@ -20,10 +21,14 @@ public class EnemyMovement : MonoBehaviour
             transform.position = waypoint.transform.position;
             yield return new WaitForSeconds(dwellTime);
         }
+        SelfDestruct();
     }
 
-    void Update()
+    private void SelfDestruct()
     {
-        
+        var deathParticleFX = Instantiate(goalParticlePrefab, transform.position, Quaternion.identity);
+        deathParticleFX.Play();
+        Destroy(deathParticleFX.gameObject, 1f);
+        Destroy(gameObject);
     }
 }
