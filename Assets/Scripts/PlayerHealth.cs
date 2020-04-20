@@ -7,17 +7,16 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] int health = 20;
     [SerializeField] Text healthText;
-
-    EnemySpawner enemySpawner;
+    [SerializeField] AudioClip selfDestructSFX;
 
     private void Start()
     {
         healthText.text = health.ToString();
-        enemySpawner = GetComponent<EnemySpawner>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        GetComponent<AudioSource>().PlayOneShot(selfDestructSFX);
         health = health - 1;
         healthText.text = health.ToString();
         if (health < 0)
