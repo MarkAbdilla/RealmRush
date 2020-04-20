@@ -63,7 +63,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20eebe1ea7ce6564e87751c3ccb8783d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dwellTime: 2
+  dwellTime: 0.2
   goalParticlePrefab: {fileID: 198537984209914932, guid: 1a51bfda454239a41afb7dee687c6ac0,
     type: 3}
 --- !u!114 &114078703179129330
