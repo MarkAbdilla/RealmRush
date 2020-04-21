@@ -13,7 +13,10 @@ public class EnemyDamage : MonoBehaviour
     private void OnParticleCollision(GameObject other)
     {
         ProcessHit();
-        ProcessDeath();
+        if (hitPoints <= 0)
+        {
+            ProcessDeath();
+        }
     }
 
     private void ProcessHit()
@@ -25,13 +28,10 @@ public class EnemyDamage : MonoBehaviour
 
     private void ProcessDeath()
     {
-        if (hitPoints <= 0)
-        {
-            var deathParticleFX = Instantiate(deathParticlePrefab, transform.position, Quaternion.identity);
-            deathParticleFX.Play();
-            AudioSource.PlayClipAtPoint(enemyDeathSFX, transform.position);
-            Destroy(deathParticleFX.gameObject, 1f);
-            Destroy(gameObject);
-        }
+        var deathParticleFX = Instantiate(deathParticlePrefab, transform.position, Quaternion.identity);
+        deathParticleFX.Play();
+        AudioSource.PlayClipAtPoint(enemyDeathSFX, Camera.main.transform.position);
+        Destroy(deathParticleFX.gameObject, 1f);
+        Destroy(gameObject);
     }
 }

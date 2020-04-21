@@ -67,7 +67,6 @@ MonoBehaviour:
   dwellTime: 2
   goalParticlePrefab: {fileID: 198537984209914932, guid: 1a51bfda454239a41afb7dee687c6ac0,
     type: 3}
-  selfDestructSFX: {fileID: 8300000, guid: 851456d61a398234ca31bc61fca6dd97, type: 3}
 --- !u!114 &114078703179129330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,6 +85,8 @@ MonoBehaviour:
     type: 3}
   enemyHitSFX: {fileID: 8300000, guid: 1f44999b86efc514c99509cdc77d7a31, type: 3}
   enemyDeathSFX: {fileID: 8300000, guid: 7a4e927a0d57d134abe7fe8d9b839a73, type: 3}
+  mainCamera: {fileID: 4233738385686399799, guid: 4631b0aa06a6a134aa8e55863ee8aa3f,
+    type: 3}
 --- !u!82 &1993410013057138507
 AudioSource:
   m_ObjectHideFlags: 0
